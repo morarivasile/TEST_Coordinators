@@ -9,8 +9,8 @@
 import UIKit
 
 protocol TermsOfUseScreenDelegate: class {
-    func didAcceptTermsOfUse()
-    func didRefuseTermsOfUse()
+    func willAcceptTermsOfUse()
+    func willRefuseTermsOfUse()
 }
 
 class TermsOfUseViewController: UIViewController {
@@ -25,11 +25,11 @@ class TermsOfUseViewController: UIViewController {
     
     @IBAction func didTapAccept(sender: UIButton) {
         print("Accept button tapped.")
-        delegate?.didAcceptTermsOfUse()
+        delegate?.willAcceptTermsOfUse()
     }
     
     @IBAction func didTapRefuse(sender: UIButton) {
         print("Refuse button tapped.")
-        delegate?.didRefuseTermsOfUse()
+        delegate?.willRefuseTermsOfUse()
     }
 }

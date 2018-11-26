@@ -40,11 +40,11 @@ class MainUnauthorizedCoordinator: Coordinator {
 }
 
 extension MainUnauthorizedCoordinator: TermsOfUseScreenDelegate {
-    func didAcceptTermsOfUse() {
+    func willAcceptTermsOfUse() {
         showMainUnauthorizedScreen()
     }
     
-    func didRefuseTermsOfUse() {
+    func willRefuseTermsOfUse() {
         print("Exiting Application...")
     }
 }
